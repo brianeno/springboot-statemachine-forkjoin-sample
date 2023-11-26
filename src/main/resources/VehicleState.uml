@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_EI-FMIhLEe6fD5R-LrW8Ww" name="SampleState">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_ERDDIIhLEe6fD5R-LrW8Ww">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_EJ4EIIhLEe6fD5R-LrW8Ww" name="VehicleStateMachine">
+    <region xmi:type="uml:Region" xmi:id="_EKkAoIhLEe6fD5R-LrW8Ww" name="MainRegion">
+      <transition xmi:type="uml:Transition" xmi:id="_OOHJMIhLEe6fD5R-LrW8Ww" name="Begin_SSM" source="_HpWbsIhLEe6fD5R-LrW8Ww" target="_Fq7AIIhLEe6fD5R-LrW8Ww"/>
+      <transition xmi:type="uml:Transition" xmi:id="_WU8rMItxEe6OWMRZVEFCDg" name="Sell Vehicle" source="_Fq7AIIhLEe6fD5R-LrW8Ww" target="_m2TCEIrLEe6OWMRZVEFCDg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_0R2SEIuYEe6OWMRZVEFCDg" name="StartAssembly" source="_m2TCEIrLEe6OWMRZVEFCDg" target="_c5QswItxEe6OWMRZVEFCDg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_FlBDAIuZEe6OWMRZVEFCDg" source="_c5QswItxEe6OWMRZVEFCDg" target="_i6UQQItxEe6OWMRZVEFCDg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_1CFKQIuaEe6OWMRZVEFCDg" source="_c5QswItxEe6OWMRZVEFCDg" target="_7r96QIuYEe6OWMRZVEFCDg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_ZO3FgIubEe6OWMRZVEFCDg" name="AssemblyComplete" source="_xUkTUItxEe6OWMRZVEFCDg" target="_YD5uQIubEe6OWMRZVEFCDg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_vwgtgIubEe6OWMRZVEFCDg" name="SHIP" source="_YD5uQIubEe6OWMRZVEFCDg" target="_t2ScgIubEe6OWMRZVEFCDg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_99cpIIuiEe6OWMRZVEFCDg" name="SSM_End" source="_t2ScgIubEe6OWMRZVEFCDg" target="_2vtQEIuiEe6OWMRZVEFCDg"/>
+      <subvertex xmi:type="uml:State" xmi:id="_Fq7AIIhLEe6fD5R-LrW8Ww" name="VehicleSold"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_HpWbsIhLEe6fD5R-LrW8Ww" name="InitialState"/>
+      <subvertex xmi:type="uml:State" xmi:id="_m2TCEIrLEe6OWMRZVEFCDg" name="VehicleSpecified"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_c5QswItxEe6OWMRZVEFCDg" name="ForkBeginAssembly" kind="fork"/>
+      <subvertex xmi:type="uml:State" xmi:id="_hUdFsItxEe6OWMRZVEFCDg" name="Assembly">
+        <region xmi:type="uml:Region" xmi:id="_i6FmwItxEe6OWMRZVEFCDg" name="RegionExterior">
+          <transition xmi:type="uml:Transition" xmi:id="_XUUrcIubEe6OWMRZVEFCDg" source="_Tadd8IubEe6OWMRZVEFCDg" target="_xUkTUItxEe6OWMRZVEFCDg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_k5F4AIubEe6OWMRZVEFCDg" name="ExteriorComplete" source="_7r96QIuYEe6OWMRZVEFCDg" target="_Tadd8IubEe6OWMRZVEFCDg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_L2RucIvVEe6OWMRZVEFCDg" source="_IvmRYIvVEe6OWMRZVEFCDg" target="_7r96QIuYEe6OWMRZVEFCDg"/>
+          <subvertex xmi:type="uml:State" xmi:id="_7r96QIuYEe6OWMRZVEFCDg" name="ExtAssembling"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Tadd8IubEe6OWMRZVEFCDg" name="ExtComplete"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_IvmRYIvVEe6OWMRZVEFCDg"/>
+        </region>
+        <region xmi:type="uml:Region" xmi:id="_uUFoQIuaEe6OWMRZVEFCDg" name="RegionInterior">
+          <transition xmi:type="uml:Transition" xmi:id="_WEsPkIubEe6OWMRZVEFCDg" source="_Pog2UIubEe6OWMRZVEFCDg" target="_xUkTUItxEe6OWMRZVEFCDg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_jvRwQIubEe6OWMRZVEFCDg" name="InteriorComplete" source="_i6UQQItxEe6OWMRZVEFCDg" target="_Pog2UIubEe6OWMRZVEFCDg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_DGt9UIvVEe6OWMRZVEFCDg" source="_BTmZ4IvVEe6OWMRZVEFCDg" target="_i6UQQItxEe6OWMRZVEFCDg"/>
+          <subvertex xmi:type="uml:State" xmi:id="_i6UQQItxEe6OWMRZVEFCDg" name="IntAssembling"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Pog2UIubEe6OWMRZVEFCDg" name="IntComplete"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_BTmZ4IvVEe6OWMRZVEFCDg" name=" "/>
+        </region>
+      </subvertex>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_xUkTUItxEe6OWMRZVEFCDg" name="JoinPostAssembly" kind="join"/>
+      <subvertex xmi:type="uml:State" xmi:id="_YD5uQIubEe6OWMRZVEFCDg" name="VehiclePackaged"/>
+      <subvertex xmi:type="uml:State" xmi:id="_t2ScgIubEe6OWMRZVEFCDg" name="VehicleShipped"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_2vtQEIuiEe6OWMRZVEFCDg" name="ExitPoint" kind="exitPoint"/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_QcBLMIhLEe6fD5R-LrW8Ww">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QcDAYIhLEe6fD5R-LrW8Ww" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
